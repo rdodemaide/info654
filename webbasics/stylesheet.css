@@ -1,0 +1,94 @@
+body {
+    background-color: #e6ffff;
+    font-family: 'Albert Sans';
+    max-width: 960px;
+    margin:auto;
+}
+header {
+    text-align: center;
+    width: 100%;
+    font-family: 'Agbalumo';
+    position: sticky;
+    top: 0;
+    background-color: #80aaff;
+    border: 2px solid #000080;
+    border-radius: 5px;
+}
+.navigationbar {
+    font-family: 'Albert Sans';
+    background-color: #00e6e6;
+    padding: 10px;
+    border-top: 2px solid #000080;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+}
+.navigationbar > a {
+    background-color: #b3ffff;
+    border: 1.5px solid #000080;
+    border-radius: 16px;
+    padding: 5px 8px;
+    font-weight: bold;
+    text-decoration: none;
+}
+h2 {
+    text-align: center;
+}
+#footer {
+    text-align: center;
+    background-color: #80ffff;
+    border: 2px solid #003333;
+    border-radius: 5px;
+    padding: 10px;
+}
+.bookcontainer {
+    display: flex;
+    align-items: stretch;
+    background-color: #4dffff;
+    border: 2px solid #000080;
+    margin-bottom: 10px;
+}
+.bookimage {
+    width: 150px;
+    border-right: 2px solid #000080;
+}
+.bookinfo {
+    flex-grow: 1;
+}
+.bookinfo > p {
+    padding: 10px;
+}
+.bookinfo > h3 {
+    background-color: #00e6e6;
+    padding: 10px;
+    border-bottom: 2px solid #000080;
+    margin: 0px;
+}
+.bookcover {
+    display: block;
+    width: 150px;
+}
+.booksreadcontainer > div {
+    display: flex;
+    background-color: #e6e6ff;
+    border: 2px solid #000080;
+    border-top: 0;
+    border-right: 0;
+    text-align: center;
+    justify-content: center;
+}
+.booksreadcontainer > div > div {
+    width: 33.3%;
+    padding: 5px;
+    border-right: 2px solid #000080;
+}
+#booksreadheadercontainer {
+    background-color: #b3b3ff;
+    border-top: 2px solid #000080;
+    font-size: larger;
+    font-weight: bold;
+}
+.otherfavorites > li {
+    font-weight: bold;
+}
