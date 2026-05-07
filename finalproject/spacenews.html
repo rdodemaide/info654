@@ -185,6 +185,7 @@
             const apodResponse = await fetch(apodImageApi);
             const apodJson = await apodResponse.json();
             const imageUrl = apodJson.hdurl;
+            if (hdurl.split(".").at(-1)==="mp4") return;
             document.body.style.backgroundImage = `url(${imageUrl})`;
             const imageTitle = apodJson.title;
             document.getElementById("apodTitle").innerHTML = apodJson.title;
