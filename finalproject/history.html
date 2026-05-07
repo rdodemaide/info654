@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/dzy0lpt.css">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="rdstyles.css" />
+    <title>History</title>
+</head>
+<body>
+   <header>
+       <h1>A Brief History of Space Travel</h1>
+       <h2>By NASA Historian, Dr. Ro Dodemaide</h2>
+       <div class="navbar">
+           <ul class="navlinks">
+           <li><a href="aliens.html"><strong>Home</strong></a></li>
+           <li><a href="history.html"><strong>History</strong></a></li>
+           <li><a href="biographies.html"><strong>Biographies</strong></a></li>
+           <li><a href="currentevents.html"><strong>Space News</strong></a></li>
+           <li><a href="aliens.html"><strong>Aliens!</strong></a></li>
+           </ul>
+       </div>
+   </header>
+    <script>
+        async function getAPOD() { //define function called getAPOD, async because needs to wait for API to be pulled
+            const apodImageApi = "https://api.nasa.gov/planetary/apod?api_key=zbTTVOBYGSFk6WeiQnxI5amS0XglXX1RQ0oMQKHs"; //defining url as a const variable because it will not change. this line provides the API we are pulling from
+            const apodResponse = await fetch(apodImageApi); //pulls the image from the API (fetch) & waits for it to be pulled
+            const apodJson = await apodResponse.json(); //takes response and converts to json object
+            const imageUrl = apodJson.hdurl; //defines the image being used as the API's jpeg
+            if (hdurl.split(".").at(-1)==="mp4") return; //prevents API if returned image (hdurl) is mp4 and reverts to placeholder background image
+            document.body.style.backgroundImage = `url(${imageUrl})`; //sets the background image of the page body as the API image per 2 lines above
+            const imageTitle = apodJson.title; //defines the title for the image as the API's provided title
+            document.getElementById("apodTitle").innerHTML = apodJson.title; //finds html element with apodTitle as an id and sets inner html to pulled title
+            const imageExplanation = apodJson.explanation;
+            document.getElementById("apodExplanation").innerHTML = apodJson.explanation;
+        }
+        getAPOD() //action actually happening based on definitions and instructions above, auto happens when page loads
+    </script>
+    <div class="rdtimeline">
+        <div class="rdcontainer rdcontainerleft">
+            <div class="rdtimelinecontent">
+                <h4>The First Satellites</h4>
+                <p>In October 1957 the Soviet Union launched Sputnik 1, the first artificial satellite, into space and it completed 1,440 orbits of the Earth.  The US followed with their first artificial satellite, Explorer 1, not long after in January 1958.  The space race between the Soviet Union and the US is just getting started!</p>
+                <img class="rdtimelinepic" src="images/sputnik.jpeg.jpg" alt="Replica of Sputnik 1 in the Museum of Space and Missile Technology">
+                <p><small>Sputnik 1 Replica Photo By By <a href="https://commons.wikimedia.org/w/index.php?curid=4894894">Andrew Butko</a></small></p>
+            </div>
+        </div>
+        <div class="rdcontainer rdcontainerright">
+            <div class="rdtimelinecontent">
+                <h4>The First People in Space</h4>
+                <p>In April 1961 the Soviet Union sent the first person into space, Yuri Gagarin, in the Vostok 1. Yuri reached an altitude of 202 miles and his flight lasted 108 minutes.  The US sent Alan Shepard into space the next month in the Freedom 7.  The first woman wasn’t sent into space until 1963, when the Soviet Union sent Valentina Tereshkova up in the Vostok 6.</p>
+                <img class="rdtimelinepic" src="images/yurigagarin.jpeg.jpg" alt="Yuri Gagarin in his Vostok 1 spacesuit">
+                <p><small>Yuri Gagarin Photo By <a href="https://commons.wikimedia.org/w/index.php?curid=177890193">Mos.ru</a></small></p>
+            </div>
+        </div>
+        <div class="rdcontainer rdcontainerleft">
+            <div class="rdtimelinecontent">
+                <h4>The First Spacewalks</h4>
+                <p>Alexei Leonov was the first person to complete a spacewalk, in March 1965. Just 3 months later Ed White became the first American to complete a spacewalk. Both Alexei and Ed made sure to get selfies while on their spacewalks!</p>
+                <img class="rdtimelinepic" src="images/alexeileonov.jpeg.png" alt="Alexei Leonov performs the first spacewalk">
+                <p><small>Alexei Leonov Photo From <a href="https://www.bbc.co.uk/news/special/2014/newsspec_9035/index.html">BBC News</a></small></p>
+                <img class="rdtimelinepic" src="images/edwhite.jpeg.jpg" alt="Ed White performs the first American spacewalk">
+                <p><small>Ed White Photo By <a href="https://images.nasa.gov/details/s65-30431">NASA / James McDivitt</a></small></p>
+            </div>
+        </div>
+        <div class="rdcontainer rdcontainerright">
+            <div class="rdtimelinecontent">
+                <h4>The Moon Landing</h4>
+                <p>In July 1969, Apollo 11 landed on the moon and Neil Armstrong and Buzz Aldrin became the first people to set foot on the Moon.  As Armstrong stepped onto the surface of the Moon, he said 'That’s one small step for [a] man, one giant leap for mankind.' Five more Apollo missions landed on the Moon by 1972, with astronauts driving as far as 56 miles across the surface of the Moon using rovers to collect moon rock samples for study.</p>
+                <img class="rdtimelinepic" src="images/buzzaldrin.jpeg.webp" alt="Buzz Aldrin walks on the Moon">
+                <p><small>Buzz Aldrin Photo By <a href="https://www.hq.nasa.gov/alsj/a11/AS11-40-5903HR.jpg">Neil Armstrong</a></small></p>
+            </div>
+        </div>
+        <div class="rdcontainer rdcontainerleft">
+            <div class="rdtimelinecontent">        
+                <h4>The End of the Space Race</h4>
+                <p>In July 1975 the US and the Soviet Union together conducted the first crewed international space mission, the Apollo-Soyuz.  The Apollo and Soyuz spacecrafts docked together for nearly two days, during which the American and Soviet crews exchanged gifts, visited each other's ships, shared meals, and conducted joint scientific experiments.</p>
+                <img class="rdtimelinepic" src="images/apollosoyuz.jpeg.jpg" alt="Artist rendering of the Apollo-Soyuz test program">
+                <p><small>Apollo-Soyuz Artist Rendering By <a href="https://commons.wikimedia.org/w/index.php?curid=558414">R. Bruneau</a></small></p>
+            </div>
+        </div>
+        <div class="rdcontainer rdcontainerright">
+            <div class="rdtimelinecontent">        
+                <h4>The International Space Station</h4>
+                <p>In 1998 an international treaty was signed by 15 countries (Canada, Japan, the Russian Federation, the United States, and eleven Member States of the European Space Agency (Belgium, Denmark, France, Germany, Italy, The Netherlands, Norway, Spain, Sweden, Switzerland and the United Kingdom)) to create and permanently inhabit an International Space Station.  The ISS has been continuously manned since 2000, and has been visited by astronauts and space tourists from 17 countries.</p>
+                <img class="rdtimelinepic" src="images/iss.jpeg.jpg" alt="The ISS as seen from the Space Shuttle Atlantis in May 2010">
+                <p><small>ISS Photo By <a href="https://commons.wikimedia.org/w/index.php?curid=10561008">NASA/Crew of STS-132</a></small></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p><strong>Sources:</strong> <a href="https://www.nasa.gov/specials/60counting/spaceflight.html">Human Spaceflight</a>, <a href="https://aerospace.org/article/brief-history-space-exploration">A Brief History of Space Exploration</a>, <a href="https://en.wikipedia.org/wiki/History_of_spaceflight">History of Spaceflight</a>, <a href="https://en.wikipedia.org/wiki/Sputnik_1">Sputnik 1</a>, <a href="https://en.wikipedia.org/wiki/Extravehicular_activity">Extravehicular Activity</a></p>
+    </footer>
+    <footer>
+        <p><strong>Background Image:</strong> NASA Atronomy Picture of the Day. <strong>Title:</strong> <span id="apodTitle"></span></p>
+        <p><strong>Image Details from NASA:</strong> <span id="apodExplanation"></span></p>
+        <p>© A. Taft, E. Weiss, J. Owen, M. Davis, R. Dodemaide, 2026</p>
+    </footer>
+</body>
+</html>

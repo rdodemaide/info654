@@ -1,0 +1,284 @@
+body {
+            background: black none no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Discovery;
+        }
+
+        header {
+            text-align: center;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255);
+            border: 2px solid black;
+            border-radius: 5px;
+            max-width: 960px;
+            margin: auto;
+            margin-bottom: 20px;
+            z-index: 2;
+        }
+
+        footer {
+            text-align: center;
+            font-size: smaller;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid black;
+            border-radius: 5px;
+            max-width: 960px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        .navbar {
+            border-top: 2px solid black;
+            margin-top: 0;
+            margin-bottom: auto;
+        }
+
+        .navlinks {
+            list-style: none;
+            gap: 10%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .navlinks a:link,
+        .navlinks a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        .navlinks a:hover,
+        .navlinks a:active {
+            color: #9f2980;
+            text-decoration: none;
+        }
+
+        .textcontainer {
+            border: 2px solid black;
+            box-sizing: border-box;
+            padding: 30px;
+            background-color: rgba(255, 255, 255, 0.8);
+            max-width: 960px;
+            text-align: left;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+
+        /*SPACE NEWS CSS */
+        .mdvideo-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: #9f2980;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .mdvideo-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Articles */
+        .mdnews-article {
+            border: 2px solid black;
+            background-color: rgba(223, 214, 241, 0.85);
+            max-width: 960px;
+            margin: 20px auto;
+            border-radius: 5px;
+            padding: 20px;
+            font-family: Discovery;
+            text-align: left
+        }
+
+        .article-header {
+            text-align: left;
+            position: static;
+            background-color: rgba(255, 255, 255, 0.75);
+            border: none;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .mdsubhead {
+            font-weight: bold;
+        }
+
+        .mdbyline {
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .news-byline {
+            text-align: center;
+            padding: 10px 0;
+            font-family: Discovery;
+            font-weight: bold;
+            border-top: 2px solid black;
+            font-size: 0.9rem;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+        }
+
+        .news-banner {
+            max-width: 960px;
+            margin: 10px auto;
+            overflow: hidden;
+            background: rgba(250, 197, 100, 0.85);
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .ticker {
+            white-space: nowrap;
+            padding: 10px 0;
+            animation: scroll-left 20s linear infinite;
+            font-family: Discovery;
+            font-weight: bold;
+        }
+
+        /* Animation */
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* LIVE NEWS STYLES */
+
+        .mdsection-title {
+            max-width: 960px;
+            margin: 30px auto 10px;
+            color: white;
+            font-family: Discovery;
+            border-bottom: 2px solid white;
+            padding-bottom: 5px;
+            text-align: left
+        }
+
+        .more-news {
+            margin-bottom: 40px;
+        }
+
+        .featured-video {
+            max-width: 960px;
+            margin: 20px auto;
+            background: rgba(223, 214, 241, 0.9);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-title {
+            margin: 0 0 10px;
+            font-family: Discovery;
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+        }
+
+        /* Responsive video */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            height: 0;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .mdcaption {
+            font-size: 0.9rem;
+            font-style: italic;
+            font-weight: normal;
+            color: #333;
+            margin: 5px 0 10px;
+        }
+
+        .featured-article {
+            max-width: 960px;
+            margin: 20px auto;
+        }
+
+        .featured-highlight {
+            background-color: rgba(161, 167, 218, 0.85);
+            border: 2px solid black;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            text-align: left
+        }
+
+        .featured-article>.mdsection-title {
+            color: white;
+            border-bottom: 2px solid white;
+        }
+
+        .featured-highlight .article-header h2 {
+            color: black;
+        }
+
+        .featured-content {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .featured-text {
+            flex: 2;
+            text-align: left;
+        }
+
+        .feature-layout {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .feature-text {
+            flex: 2;
+        }
+
+        .feature-image {
+            flex: 1;
+            margin: 0;
+        }
+
+        .feature-image img {
+            width: 100%;
+            border-radius: 6px;
+            border: 2px solid black;
+        }
+
+        .feature-image figcaption {
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 5px;
+            color: #000000;
+        }
