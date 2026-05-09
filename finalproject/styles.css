@@ -32,7 +32,7 @@ header {
     color: rgba(255, 255, 255, 1);
     background-image: url(images/moon-header.jpg);  
     background-repeat: no-repeat;
-    background-size: fit;
+    background-size: cover;
     background-position: center; 
 }
 footer {
