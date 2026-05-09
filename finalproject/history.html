@@ -28,7 +28,7 @@
             const apodResponse = await fetch(apodImageApi); //pulls the image from the API (fetch) & waits for it to be pulled
             const apodJson = await apodResponse.json(); //takes response and converts to json object
             const imageUrl = apodJson.hdurl; //defines the image being used as the API's jpeg
-            if (hdurl.split(".").at(-1)==="mp4") return; //prevents API if returned image (hdurl) is mp4 and reverts to placeholder background image
+            if (imageUrl.split(".").at(-1)==="mp4") return; //prevents API if returned image (imageUrl) is mp4 and reverts to placeholder background image
             document.body.style.backgroundImage = `url(${imageUrl})`; //sets the background image of the page body as the API image per 2 lines above
             const imageTitle = apodJson.title; //defines the title for the image as the API's provided title
             document.getElementById("apodTitle").innerHTML = apodJson.title; //finds html element with apodTitle as an id and sets inner html to pulled title
