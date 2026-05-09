@@ -41,7 +41,7 @@
 
         .mdbyline {
             font-size: 0.9rem;
-            color: #333;
+            color: rgba(255, 255, 255, 1);
         }
 
         .news-byline {
@@ -161,7 +161,7 @@
         }
 
         .featured-highlight .article-header h2 {
-            color: black;
+            color: rgba(255, 255, 255, 1);
         }
 
         .featured-content {

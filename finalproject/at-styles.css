@@ -1,0 +1,28 @@
+/* 
+Styles that apply specifically to elements on Aliens page
+*/
+
+#fig1 {
+    float: right;
+    text-align: center;
+    font-size: x-small;
+    max-width: 32%;
+}
+
+#fig1 img {
+    height: auto;
+    display: block;
+}
+
+#fig2 {
+    float: left;
+    text-align: center;
+    font-size: x-small;
+    max-width: 32%;
+}
+
+#fig2 img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+}

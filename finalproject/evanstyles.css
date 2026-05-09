@@ -1,0 +1,46 @@
+        .cadetnames {
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        .cadet img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #1a2a33;
+            margin: 10px 0;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cadet-bio p {
+            margin-top: 10px;
+        }
+        .cadet strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2em;
+        }
+        .cadet p {
+            font-size: 0.9em;
+            color: #1a2a33; 
+            margin: 0;
+        }
+        .cadet-bio {
+            position: relative;
+            max-width: 960px;
+            margin: auto;
+        }
+        .cadet-bio img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid black;
+            object-fit: cover;
+            position: absolute;
+            right: -20px;
+            top: -10px;
+            background-color: white;
+        }
+        .cadet-bio h3 {
+            padding-right: 60px;
+        }

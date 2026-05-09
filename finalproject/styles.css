@@ -7,6 +7,16 @@ body {
     flex-direction: column;
     min-height: 100vh;
 }
+body a[href^="http"]:not([href*="654-final-project.com"])::after {
+   content: " \2197";
+}
+body a:link, a:visited {
+   color:#9f2980;
+}
+body a:hover {
+   color: rgba(255, 255, 255, 1);
+   cursor: url(images/icon-space-shuttle-click.png), pointer;
+}
 header {
     text-align: center;
     width: 100%;
@@ -19,6 +29,11 @@ header {
     margin: auto;
     margin-bottom: 20px;
     z-index: 2;
+    color: rgba(255, 255, 255, 1);
+    background-image: url(images/moon-header.jpg);  
+    background-repeat: no-repeat;
+    background-size: fit;
+    background-position: center; 
 }
 footer {
     text-align: center;
@@ -47,11 +62,11 @@ footer {
     justify-content: center;
     text-decoration: none;
 }
-.navlinks a:link, a:visited {
-    color: black;
+.navlinks a:link, a:visited, a:active {
+    color: rgba(255, 255, 255, 1);
     text-decoration: none;
 }
-.navlinks a:hover, a:active {
+.navlinks a:hover {
     color: #9f2980;
     text-decoration: none;
 }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aliens</title>
+    <link rel="stylesheet" type="text/css" href="Styles/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="Styles/at-styles.css"/>
+    <link rel="stylesheet" href="https://use.typekit.net/dzy0lpt.css"/>
+</head>
+
+<body>
+    <header>
+        <h1>Aliens</h1>
+        <div class="navbar">
+            <ul class="navlinks">
+            <li><a href="index.html"><strong>Home</strong></a></li>
+            <li><a href="history.html"><strong>History</strong></a></li>
+            <li><a href="biographies.html"><strong>Biographies</strong></a></li>
+            <li><a href="space-news.html"><strong>Space News</strong></a></li>
+            <li><a href="aliens.html"><strong>Aliens</strong></a></li>
+            </ul>
+        </div>
+    </header>
+    
+    <script>
+        async function getAPOD() {
+            const apodImageApi = "https://api.nasa.gov/planetary/apod?api_key=zbTTVOBYGSFk6WeiQnxI5amS0XglXX1RQ0oMQKHs";
+            const apodResponse = await fetch(apodImageApi);
+            const apodJson = await apodResponse.json();
+            const imageUrl = apodJson.hdurl;
+            if (imageUrl.split(".").at(-1)==="mp4") return;document.body.style.backgroundImage = `url(${imageUrl})`;
+            const imageTitle = apodJson.title; document.getElementById("apodTitle").innerHTML = apodJson.title;
+            const imageExplanation = apodJson.explanation;document.getElementById("apodExplanation").innerHTML = apodJson.explanation;
+        }
+        getAPOD()
+    </script>
+
+    <div class="textcontainer">
+
+        <h2>Introduction: The Fermi Paradox</h2>
+
+        <p>In 1950 Italian physicist and father of the atomic bomb, <a href="https://www.nobelprize.org/prizes/physics/1938/fermi/biographical/">Enrico Fermi</a>, asked several of his colleagues at the top-secret research center, Los Alamos, NM, a strange question: “But where is everybody?” According to one colleague, Edward Teller, he was met with general laughter followed by a profound discussion of the issue he was posing.</p>
+        
+        <figure id="fig1"><img src="images/Enrico-Fermi-1950.webp" alt="Black & white photo of a man writing on a chalk board"><figcaption>Physicist and atomic researcher Enrico Fermi in 1950. <strong>Source: </strong><a href="https://www.britannica.com/biography/Enrico-Fermi">Encyclopedia Britannica</a></figcaption></figure> 
+
+        <p><strong>The problem: </strong>If, in a few thousand years, humans on Earth had developed technology advanced enough to at least transmit messages across vast space in the galaxy; there exist thousands of planets within our galaxy that have the proper conditions for intelligent life; and thousands of these same planets are millions of years older than Earth - logic would dictate that by now one of these species should have developed the capacity to contact or even visit Earth. In fact, Fermi notes, they should have been able to do so many times over. This might seem far-fetched, but the more we learn about our galaxy, the Milky Way, and the star systems inside it, the more many of us have come to wonder: where is everybody?</p>
+
+        <p>It’s no coincidence that Los Alamos was the birthplace of a scientific treatment of the question of extraterrestrial life. The birthplace of rocketry and the atomic bomb, New Mexico had recently burst into the mainstream via the <a href="https://airandspace.si.edu/stories/editorial/reports-ufos-1947-roswell-incident">1947 Roswell Incident</a>. Since then, the study of Unidentified Flying Objects (UFOs) and extraterrestrial life has been largely thought of as the fixation of “crackpots,” filler for tabloids like the National Enquirer, or the sweaty obsession of conspiracy minded online communities. However, Fermi and a number of eminent successors such as Carl Sagan continued to treat this issue with seriousness.</p> 
+
+        <p>More recently, the search for extraterrestrial life has moved away from a hunt for “little green men” and the annals of science fiction to become a considered search for the origin and conditions for sustaining and developing life. In 1963 Carl Sagan published findings that show how exposure to ultraviolet light produces in single-celled organisms a substance called ATP, a key source of energy and a precursor to DNA that likely permitted life to develop out of the primordial oceans of Earth. His findings revealed that it was possible, in fact, probably, for other planets with similar biological and atmospheric conditions to develop complex life. Since this discovery, these conditions have been observed in numerous locations throughout the Milky Way.</p>
+        
+         <figure id="fig2"><img src="images/K2-18b-illustration.jpg" alt="Planet with a blue atmosphere with a bright red star in the background"><figcaption>Exoplanet K2-18b (illustration). <strong>Source: </strong><a href="https://science.nasa.gov/asset/webb/exoplanet-k2-18-b-illustration/">NASA online.</a></figcaption></figure> 
+
+        <p>An example would be exoplanet K2-18b, roughly 124 light years from Earth. Observations taken from the <a href="https://science.nasa.gov/mission/webb/">James Webb Space Telescope</a> have proven that this panet enjoys roughly the same amount of light from its nearby star as our Earth recieves from the sun. On top of this, the presence of water vapor, carbon dioxide, and methane in its atmosphere has given rise to the theory that it may be a habitable "goldilocks" planet complete with ocean ecosystems, albeit one with a more hydrogen-rich atmosphere. In 2025, Prof. Nikku Madhusudhan and a team of scientists at Cambridge University <a href="https://www.cam.ac.uk/stories/strongest-hints-of-biological-activity">reported</a> that the atmosphere of K2-18b contained molecules only thought to arise primarily from the presence of life. These observations, facilitated by developing technologies such as radio spectroscopy and deep-space photography, are only just starting to give us a better glimpse of the billions of stars that blanket the night sky.</p> 
+    </div>
+    
+    <footer>
+        <p><strong>Background Image: </strong><a href= "https://apod.nasa.gov/apod/astropix.html" target="_blank" rel="noopener noreferrer">NASA Atronomy Picture of the Day</a><strong>. Title: </strong><span id="apodTitle"></span></p>
+        <p><strong>Image Details from NASA:</strong> <span id="apodExplanation"></span></p>
+        <p><strong>Header Image: </strong><a href="https://www.nasa.gov/gallery/lunar-flyby/" target="_blank" rel="noopener noreferrer">Artemis II Lunar Flyby Gallery</a>. A Setting Earth (2026). NASA.</p>
+        <p>© A. Taft, E. Weiss, J. Owen, M. Davis, R. Dodemaide, 2026</p>
+    </footer>
+
+
+</body>
+
+</html>
+
