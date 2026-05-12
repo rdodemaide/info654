@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    cursor: url(images/rocket-icon1.png), auto;
 }
 body a[href^="http"]:not([href*="654-final-project.com"])::after {
    content: " \2197";
@@ -15,7 +16,7 @@ body a:link, a:visited {
 }
 body a:hover {
    color: rgba(255, 255, 255, 1);
-   cursor: url(images/icon-space-shuttle-click.png), pointer;
+   cursor: url(images/rocket-icon2.png) 15 0, pointer;
 }
 header {
     text-align: center;
